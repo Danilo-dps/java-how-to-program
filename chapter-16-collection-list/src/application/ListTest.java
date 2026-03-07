@@ -1,5 +1,7 @@
 package application;
 
+// Figura 16.3: ListTest.java
+// Lists, LinkedLists e ListIterators.
 import java.util.List;
 import java.util.LinkedList;
 import java.util.ListIterator;
