@@ -7,8 +7,7 @@ import java.util.Collections;
 // class to represent a Card in a deck of cards
 class Card 
 {   
-   public static enum Face {Ace, Deuce, Three, Four, Five, Six,
-      Seven, Eight, Nine, Ten, Jack, Queen, King};
+   public static enum Face {Ace, Deuce, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King};
    public static enum Suit {Clubs, Diamonds, Hearts, Spades};
 
    private final Face face; 
