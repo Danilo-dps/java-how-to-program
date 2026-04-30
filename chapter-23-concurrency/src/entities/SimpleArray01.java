@@ -4,14 +4,14 @@ package entities;
 import java.security.SecureRandom;
 import java.util.Arrays;
 
-public class SimpleArray // CAUTION: NOT THREAD SAFE!
+public class SimpleArray01 // CAUTION: NOT THREAD SAFE!
 {
    private static final SecureRandom generator = new SecureRandom();
    private final int[] array; // the shared integer array
    private int writeIndex = 0; // shared index of next element to write
 
    // construct a SimpleArray of a given size
-   public SimpleArray(int size)
+   public SimpleArray01(int size)
    {
       array = new int[size];
    }

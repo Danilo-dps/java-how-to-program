@@ -3,19 +3,19 @@ package entities;
 // Adds integers to an array shared with other Runnables
 import java.lang.Runnable;
 
-public class ArrayWriter implements Runnable {
-   private final SimpleArray sharedSimpleArray;
+public class ArrayWriter01 implements Runnable {
+   private final SimpleArray01 sharedSimpleArray01;
    private final int startValue;
 
-   public ArrayWriter(int value, SimpleArray array) {
+   public ArrayWriter01(int value, SimpleArray01 array) {
       startValue = value;
-      sharedSimpleArray= array;
+      sharedSimpleArray01 = array;
    }
 
    public void run() {
       for (int i = startValue; i < startValue + 3; i++)
       {
-         sharedSimpleArray.add(i); // add an element to the shared array
+         sharedSimpleArray01.add(i); // add an element to the shared array
       } 
    }
 } // end class ArrayWriter

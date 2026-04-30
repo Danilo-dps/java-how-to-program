@@ -1,21 +1,21 @@
 package application;
 // Fig 23.7: SharedArrayTest.java
 // Executing two Runnables to add elements to a shared SimpleArray.
-import entities.ArrayWriter;
-import entities.SimpleArray;
+import entities.ArrayWriter01;
+import entities.SimpleArray01;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public class SharedArrayTest {
+public class SharedArrayTest01 {
    public static void main(String[] arg) {
       // construct the shared object
-      SimpleArray sharedSimpleArray = new SimpleArray(6);
+      SimpleArray01 sharedSimpleArray01 = new SimpleArray01(6);
 
       // create two tasks to write to the shared SimpleArray
-      ArrayWriter writer1 = new ArrayWriter(1, sharedSimpleArray);
-      ArrayWriter writer2 = new ArrayWriter(11, sharedSimpleArray);
+      ArrayWriter01 writer1 = new ArrayWriter01(1, sharedSimpleArray01);
+      ArrayWriter01 writer2 = new ArrayWriter01(11, sharedSimpleArray01);
 
       // execute the tasks with an ExecutorService
       ExecutorService executorService = Executors.newCachedThreadPool();
@@ -33,7 +33,7 @@ public class SharedArrayTest {
          if (tasksEnded)
          {
             System.out.printf("%nContents of SimpleArray:%n");
-            System.out.println(sharedSimpleArray); // print contents
+            System.out.println(sharedSimpleArray01); // print contents
          }
          else
             System.out.println(
