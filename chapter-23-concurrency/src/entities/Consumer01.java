@@ -5,12 +5,12 @@ import interfaces.Buffer;
 
 import java.security.SecureRandom;
 
-public class Consumer implements Runnable {
+public class Consumer01 implements Runnable {
    private static final SecureRandom generator = new SecureRandom();
    private final Buffer sharedLocation; // reference to shared object
 
    // constructor
-   public Consumer(Buffer sharedLocation)
+   public Consumer01(Buffer sharedLocation)
    {
       this.sharedLocation = sharedLocation;
    }

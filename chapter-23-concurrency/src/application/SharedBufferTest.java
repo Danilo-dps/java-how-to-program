@@ -1,8 +1,8 @@
 package application;
 // Fig. 23.13: SharedBufferTest.java
 // Application with two threads manipulating an unsynchronized buffer.
-import entities.Consumer;
-import entities.Producer;
+import entities.Consumer01;
+import entities.Producer01;
 import entities.UnsynchronizedBuffer;
 import interfaces.Buffer;
 
@@ -25,8 +25,8 @@ public class SharedBufferTest {
 
       // execute the Producer and Consumer, giving each 
       // access to the sharedLocation
-      executorService.execute(new Producer(sharedLocation));
-      executorService.execute(new Consumer(sharedLocation));
+      executorService.execute(new Producer01(sharedLocation));
+      executorService.execute(new Consumer01(sharedLocation));
 
       executorService.shutdown(); // terminate app when tasks complete
       executorService.awaitTermination(1, TimeUnit.MINUTES); 
